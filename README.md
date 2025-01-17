@@ -56,7 +56,9 @@ community-service-tracker/
 ├── .gitignore                    # Git ignore file
 └── README.md                     # Main project documentation
 ```
-## Setup & Installation
+## Installation
+
+To set up the Community Service Tracker locally, follow these steps:
 
 ### Prerequisites
 - Node.js (v14 or later)
@@ -64,6 +66,21 @@ community-service-tracker/
 - Firebase account
 
 ### Frontend Setup
-1. Go to the `frontend` directory:
-   ```bash
+1. Navigate to the `frontend` directory:
    cd frontend
+2. Install dependencies:
+   npm install
+3. Create a `.env` file and add your Firebase configuration.
+4. Start the frontend:
+   npm start
+
+### Backend Setup
+1. Navigate to the `backend` directory:
+   cd backend
+2. Install dependencies:
+   npm install
+3. Create a `.env` file and add your Firebase configuration.
+4. Start the backend:
+   node index.js
+
+Now you can access the Community Service Tracker locally!
