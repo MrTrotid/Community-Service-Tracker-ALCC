@@ -37,6 +37,7 @@ The platform is built to:
 - **Tools**: GitHub, Figma
 
 ## Folder Structure
+```
 community-service-tracker/
 │
 ├── frontend/                     # Frontend application
@@ -54,7 +55,7 @@ community-service-tracker/
 │
 ├── .gitignore                    # Git ignore file
 └── README.md                     # Main project documentation
-
+```
 ## Setup & Installation
 
 ### Prerequisites
