@@ -37,9 +37,23 @@ The platform is built to:
 - **Tools**: GitHub, Figma
 
 ## Folder Structure
-community-service-tracker/ │ ├── frontend/ # Frontend application │ ├── public/ # Public assets │ ├── src/ # Source files │ ├── package.json # Frontend dependencies │ └── README.md # Frontend documentation │ ├── backend/ # Backend application │ ├── controllers/ # Request handlers │ ├── models/ # Database models │ ├── routes/ # API routes │ ├── index.js # Main server file │ └── package.json # Backend dependencies │ ├── .gitignore # Git ignore file └── README.md # Main project documentation
-
-
+community-service-tracker/
+│
+├── frontend/                     # Frontend application
+│   ├── public/                   # Public assets
+│   ├── src/                      # Source files
+│   ├── package.json              # Frontend dependencies
+│   └── README.md                 # Frontend documentation
+│
+├── backend/                      # Backend application
+│   ├── controllers/              # Request handlers
+│   ├── models/                   # Database models
+│   ├── routes/                   # API routes
+│   ├── index.js                  # Main server file
+│   └── package.json              # Backend dependencies
+│
+├── .gitignore                    # Git ignore file
+└── README.md                     # Main project documentation
 
 ## Setup & Installation
 
