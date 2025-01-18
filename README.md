@@ -78,16 +78,30 @@ community-service-tracker/
 
 ---
 
+## 📂 .gitignore
+
+The `.gitignore` file is included in the project to specify which files and directories should be ignored by Git. This helps keep the repository clean and free from unnecessary files. 
+
+### Ignored Files and Directories:
+- **Node Modules**: The `node_modules/` directory contains all installed packages and is not needed in the repository.
+- **Build Output**: The `build/` directories for both frontend and backend contain compiled files that can be generated from the source code.
+- **Logs**: Any log files generated during development or runtime are ignored.
+- **Environment Variables**: The `.env` files contain sensitive information and should not be tracked in version control.
+- **IDE and Editor Files**: Configuration files for various IDEs and editors are ignored to avoid clutter.
+- **Miscellaneous**: Temporary files such as `.tgz` and `.zip` files are also ignored.
+
+Make sure to keep the `.gitignore` file updated as the project evolves to ensure that unnecessary files are not included in the repository.
+
+---
+
 ## ⚙️ Installation
 
 Follow these steps to set up the **Community Service Tracker** locally.
 
 ### Prerequisites
-- **Node.js** (v14 or later)
+- **Node.js** (v18 or later)
 - **npm** (Node Package Manager)
 - A Firebase account with Firestore and Authentication enabled
-
----
 
 ### 🖥️ Frontend Setup
 
@@ -95,39 +109,46 @@ Follow these steps to set up the **Community Service Tracker** locally.
    ```bash
    cd frontend
    ```
+
 2. Install required dependencies:
    ```bash
    npm install
    ```
+
 3. Create a `.env` file in the frontend directory and include your Firebase configuration:
    ```plaintext
    REACT_APP_API_KEY=your-firebase-api-key
    REACT_APP_AUTH_DOMAIN=your-auth-domain
    REACT_APP_PROJECT_ID=your-project-id
+   REACT_APP_STORAGE_BUCKET=your-storage-bucket
+   REACT_APP_MESSAGING_SENDER_ID=your-sender-id
+   REACT_APP_APP_ID=your-app-id
    ```
+
 4. Start the frontend development server:
    ```bash
    npm start
    ```
 
----
-
 ### 🛠️ Backend Setup
 
 1. Navigate to the `backend` directory:
    ```bash
-   cd backend
+   cd ../backend
    ```
+
 2. Install required dependencies:
    ```bash
    npm install
    ```
+
 3. Create a `.env` file in the backend directory and include your Firebase configuration:
    ```plaintext
    FIREBASE_API_KEY=your-firebase-api-key
    FIREBASE_PROJECT_ID=your-project-id
    JWT_SECRET=your-secret-key
    ```
+
 4. Start the backend server:
    ```bash
    node index.js
@@ -154,8 +175,8 @@ For major changes, open an issue first to discuss your ideas with the community.
 ---
 
 Happy Coding! 💻  
-Maintained by [Your Name or Team Name]. 😊
+Maintained by Baman Prasad Guragain. 😊
 
 --- 
 
-This format provides clarity, visual appeal, and easy navigation while being informative.
+
