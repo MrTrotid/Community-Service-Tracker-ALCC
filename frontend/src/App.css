@@ -1,0 +1,9 @@
+/* App.css */
+.app-container {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: auto; /* Center the container */
+  }

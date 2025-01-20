@@ -1,0 +1,66 @@
+.home-login-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full height */
+    background-color: #007bff; /* Background color */
+    padding: 20px;
+    color: white; /* Text color */
+}
+
+.content {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between sections */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: limit max width */
+}
+
+.home-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background */
+    border-radius: 10px;
+    margin-right: 20px; /* Space between sections */
+    flex: 6; /* Set flex-grow to 7 for 7:3 ratio */
+}
+
+.login-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background */
+    border-radius: 10px;
+    flex: 4; /* Set flex-grow to 3 for 7:3 ratio */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Ensure it takes full height */
+}
+
+h1 {
+    font-size: 2rem; /* Adjust font size */
+}
+
+p {
+    font-size: 1rem; /* Adjust font size */
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* White background */
+    color: red; /* Red text */
+    border: 2px solid red; /* Red border */
+    border-radius: 25px; /* Curved corners */
+    padding: 5px 10px; /* Reduced padding */
+    cursor: pointer;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    margin-top: 10px; /* Space above button */
+    width: auto; /* Allow button to size based on content */
+    max-width: 200px; /* Optional: limit max width */
+}
+
+.google-logo {
+    width: 20px; /* Logo width */
+    height: 20px; /* Logo height */
+    margin-right: 10px; /* Space between logo and text */
+}

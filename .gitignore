@@ -6,6 +6,7 @@ backend/node_modules/
 # Build output
 frontend/build/
 backend/build/
+dist/
 
 # Logs
 logs
@@ -18,12 +19,36 @@ yarn-error.log*
 .env
 frontend/.env
 backend/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # IDE and editor files
 .idea/
 .vscode/
 .DS_Store
+Thumbs.db
 
 # Miscellaneous
 *.tgz
 *.zip
+
+# Firebase service account key
+firebase-adminsdk.json  # If you have a service account key file
+backend/serviceAccountKey.json  # Replace with the actual path
+
+# Firebase configuration files (if any)
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Firebase config files (if applicable)
+src/firebase/config.js  # Example path, adjust as necessary
+
+# Service account key
+backend/serviceAccountKey.json

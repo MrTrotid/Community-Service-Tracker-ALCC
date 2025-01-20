@@ -1,18 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home'; // Ensure this import is correct
+import HomeLogin from './components/HomeLogin'; // Import the HomeLogin component
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div>
-        <h1>Community Service Tracker</h1>
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Ensure this is correct */}
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <HomeLogin />
+    </div>
   );
-}
+};
 
 export default App;
