@@ -3,13 +3,14 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
+  apiKey: "AIzaSyDslm36Rv1qpDntxNrMtaFGtdQRC3xJZ-s",
+  authDomain: "community-server-tracker.firebaseapp.com",
+  projectId: "community-server-tracker",
+  storageBucket: "community-server-tracker.firebasestorage.app",
+  messagingSenderId: "451514257592",
+  appId: "1:451514257592:web:40459bca9799b63d49644d",
+  measurementId: "G-25E4ETJ2D2"
+};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
