@@ -1,73 +1,275 @@
 .home-login-container {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100vh; /* Full height */
-    background-color: #007bff; /* Background color */
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff; /* Changed to white */
     padding: 20px;
-    color: white; /* Text color */
+    color: #000000; /* Changed to black */
 }
+
+:root {
+    --aqua-color: #3498db; /* Aqua color */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    height: 60px;
+    border: 2px solid var(--aqua-color);
+  }
+  
+  .navbar h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #3498db;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 100px;
+  }
+  
+  .nav-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--aqua-color);
+    background-color: white;
+  }
+  
+  .nav-links a:hover {
+    color: white;
+    background-color: var(--aqua-color);
+  }
 
 .content {
-    display: flex; /* Use flexbox for side-by-side layout */
-    justify-content: space-between; /* Space between sections */
-    width: 100%; /* Full width */
-    max-width: 1200px; /* Optional: limit max width */
-}
-
-@media only screen and (max-width: 600px)  {
-    .content {
-        flex-direction: column;
-        margin: 10px;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .home-section {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light background */
-    border-radius: 10px;
-    margin-right: 20px; /* Space between sections */
-    flex: 6; /* Set flex-grow to 7 for 7:3 ratio */
+    flex: 1;
+    max-width: 600px;
+    padding-right: 60px;
+}
+
+.home-section h1 {
+    font-size: 2.5rem;
+    color: #3498db; /* Blue heading color */
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #000000; /* Added black color */
 }
 
 .login-section {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light background */
-    border-radius: 10px;
-    flex: 6; /* Set flex-grow to 3 for 7:3 ratio */
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    height: 100%; /* Ensure it takes full height */
+    background-color: #ffffff; /* White background for login card */
+    border-radius: 40px; /* Increased from 10px to match navbar style */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    border: 2px solid var(--aqua-color); /* Added border to match other elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
 }
 
-h1 {
-    font-size: 2rem; /* Adjust font size */
+.login-section:hover {
+    transform: scale(1.02); /* Slightly increase size on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
-p {
-    font-size: 1rem; /* Adjust font size */
+.login-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #000000; /* Added black color */
 }
 
-.google-login-button {
+.button-group {
     display: flex;
-    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
     justify-content: center;
-    background-color: white; /* White background */
-    color: red; /* Red text */
-    border: 2px solid red; /* Red border */
-    border-radius: 25px; /* Curved corners */
-    padding: 5px 10px; /* Reduced padding */
-    cursor: pointer;
-    font-size: 0.9rem; /* Slightly smaller font size */
-    margin-top: 10px; /* Space above button */
-    width: auto; /* Allow button to size based on content */
-    max-width: 200px; /* Optional: limit max width */
 }
 
-.google-logo {
-    width: 20px; /* Logo width */
-    height: 20px; /* Logo height */
-    margin-right: 10px; /* Space between logo and text */
+.login-button {
+  --primary-color: #3498db;    /* Changed back to original aqua color */
+  --secondary-color: #fff;
+  --hover-color: #2980b9;      /* Changed back to original hover color */
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.login-button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.login-button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.login-button:hover {
+  background-color: var(--hover-color);
+}
+
+.login-button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.login-button:hover .arrow:before {
+  right: 0;
+}
+
+.learn-button {
+    background-color: transparent;
+    color: #3498db; /* Blue text */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.learn-button:hover {
+    background-color: #3498db; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.modal-content h2 {
+    color: var(--aqua-color);
+    margin-bottom: 20px;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-content li {
+    padding: 10px 0;
+    color: #000000; /* Changed to black */
+}
+
+.close-button {
+    background-color: var(--aqua-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.close-button:hover {
+    background-color: #2980b9;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-section {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .navbar {
+        margin: 10px auto;
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
 }
