@@ -1,12 +1,17 @@
 import React from 'react';
-import HomeLogin from './components/HomeLogin'; // Import the HomeLogin component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomeLogin from './components/HomeLogin';
+import Dashboard from './components/Dashboard';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <HomeLogin />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeLogin />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

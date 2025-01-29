@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomeLogin.css';
 import Loader from './Loader';
 import { auth, provider } from '../firebase/config';
 import { signInWithPopup } from 'firebase/auth';
 
 const HomeLogin = () => {
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [showModal, setShowModal] = useState(false);
@@ -21,6 +23,7 @@ const HomeLogin = () => {
         setError('');
         try {
             await signInWithPopup(auth, provider);
+            navigate('/dashboard');  // Redirect to dashboard after successful login
         } catch (error) {
             setError('Failed to log in. Please try again.');
         } finally {
@@ -52,7 +55,7 @@ const HomeLogin = () => {
                             </p>
                         </div>
                         <div className="login-section">
-                            <p>Login with your college email</p>
+                            <p>Sign in to get started</p>
                             <div className="button-group">
                                 <button className="login-button" onClick={handleLogin}>
                                     Login
