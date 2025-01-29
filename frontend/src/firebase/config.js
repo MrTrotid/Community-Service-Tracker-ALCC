@@ -15,6 +15,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const db = getFirestore(app);
 
-export { auth, provider };
-export const db = getFirestore(app);
+// Collection references
+const studentsRef = 'students';
+const serviceLogsRef = 'service_logs';
+
+export { db, auth, provider, studentsRef, serviceLogsRef };

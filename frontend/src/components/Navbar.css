@@ -1,0 +1,74 @@
+:root {
+    --aqua-color: #3498db; /* Aqua color */
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    height: 60px;
+    border: 2px solid var(--aqua-color);
+}
+  
+.navbar h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #3498db;
+    margin: 0;
+    white-space: nowrap;
+}
+  
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.left-links {
+    margin-right: auto;
+}
+
+.right-links {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+  
+.nav-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--aqua-color);
+    background-color: white;
+}
+  
+.nav-links a:hover {
+    color: white;
+    background-color: var(--aqua-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin: 10px auto;
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+}
