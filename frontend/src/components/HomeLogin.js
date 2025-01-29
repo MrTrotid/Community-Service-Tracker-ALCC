@@ -4,12 +4,14 @@ import './HomeLogin.css';
 import Loader from './Loader';
 import { auth, provider } from '../firebase/config';
 import { signInWithPopup } from 'firebase/auth';
+import { useAuth } from '../contexts/AuthContext';
 
 const HomeLogin = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [showModal, setShowModal] = useState(false);
+    const { user } = useAuth();
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -18,12 +20,35 @@ const HomeLogin = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        if (user) {
+            const isValidEmail = user.email.match(/^[\d]{3}a[\d]{3}@sxc\.edu\.np$/);
+            if (!isValidEmail) {
+                auth.signOut();
+                setError('Please use your St. Xavier\'s College email (@sxc.edu.np) to login.');
+            } else {
+                navigate('/dashboard');
+            }
+        }
+    }, [user, navigate]);
+
     const handleLogin = async () => {
         setLoading(true);
         setError('');
         try {
-            await signInWithPopup(auth, provider);
-            navigate('/dashboard');  // Redirect to dashboard after successful login
+            const result = await signInWithPopup(auth, provider);
+            const email = result.user.email;
+            
+            // Check if email matches the required pattern
+            const isValidEmail = email.match(/^[\d]{3}a[\d]{3}@sxc\.edu\.np$/);
+            
+            if (!isValidEmail) {
+                await auth.signOut(); // Sign out if email doesn't match
+                setError('Please use your St. Xavier\'s College email (@sxc.edu.np) to login.');
+                return;
+            }
+            
+            navigate('/dashboard');
         } catch (error) {
             setError('Failed to log in. Please try again.');
         } finally {

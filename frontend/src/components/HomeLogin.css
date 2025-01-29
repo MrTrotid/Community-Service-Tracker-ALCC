@@ -253,6 +253,15 @@
     background-color: #2980b9;
 }
 
+.error {
+    color: #e74c3c;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(231, 76, 60, 0.1);
+    font-size: 0.9rem;
+}
+
 @media only screen and (max-width: 768px) {
     .content {
         flex-direction: column;
